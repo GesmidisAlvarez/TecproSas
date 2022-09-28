@@ -1,0 +1,48 @@
+﻿@page
+@model TecproSas.App.SitioWeb.Pages_Usuario.ListModel
+@{
+}
+<h1> Usuarios</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>nombre</th>
+            <th>apellido</th>
+            <th>direccion</th>
+            <th>rol</th>
+			<th>estado</th>
+			<th>nickname</th>
+			<th>contrasenia</th>
+		
+            <th>Borrar</th>
+            <th>Editar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model.usuarios)
+        {
+            <tr>
+                <td>@usuario.nombre</td>
+                <td>@usuario.apellidos</td>
+                <td>@usuario.direccion</td>
+                <td>@usuario.rol</td>
+				<td>@usuario.estado</td>
+				<td>@usuario.nicknname</td>
+				<td>@usuario.contrasenia</td>
+				
+
+                <td>
+                    <a class="btn btn-info"  asp-page=".\Edit" asp-route-id="@usuario.usuarioId">Editar</a>
+                </td>
+                <td>
+                    <a class="btn btn-danger"  asp-page=".\Delete" asp-route-id="@usuario.usuarioId">Borrar</a>
+                </td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+
+<td>
+    <a class="btn btn-success"  asp-page=".\Create">Crear Usuario</a>
+</td>

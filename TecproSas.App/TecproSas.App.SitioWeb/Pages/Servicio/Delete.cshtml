@@ -1,0 +1,13 @@
+﻿@page
+@model TecproSas.App.SitioWeb.Pages_Servicio.DeleteModel
+@{
+}
+<h1>Borrar Servicio</h1>
+<form method='post'>
+    <!-- Asignar Id del cliente a borrar -->
+    <input type="hidden" asp-for="servicio.servicioId" />
+    <h3>¿ Está seguro de borrar el Servicio @Model.servicio.nombServicio ?</h3>
+
+    <input type="submit" value="Borrar" class="btn btn-danger" /> 
+    <a asp-page="/Servicio/List">Devuelta a la lista</a>
+</form>

@@ -1,0 +1,51 @@
+﻿@page
+@model TecproSas.App.SitioWeb.Pages_Proyecto.ListModel
+@{
+}
+<h1>Proyectos</h1>
+<table class="table">
+    <thead>
+         <tr>
+            <th>Proyecto Id</th>
+            <th>Cliente Id</th>
+            <th>Servicio Id</th>
+            <th>Fase Id</th>
+            <th>Nombre</th>
+            <th>Aprobado Por</th>
+            <th>Descripcion</th>
+            <th>Fecha de Inicio</th>
+            <th>Presupuesto</th>
+            <th>Tiempo Ejecucion</th>
+            <th>Fase Actual</th>
+            
+            <th>Editar</th>
+            <th>Borrar</th>
+        </tr>
+    </thead> 
+    <tbody>
+          @foreach (var proyecto in Model.proyectos)
+        {
+            <tr>
+                <td>@proyecto.proyectoId</td>
+                <td>@proyecto.clienteId</td>
+                <td>@proyecto.servicioId</td> 
+                <td>@proyecto.faseId</td> 
+                <td>@proyecto.nombre</td>  
+                <td>@proyecto.aprobadoPor</td>
+				<td>@proyecto.descripcion</td>  
+				<td>@proyecto.fechaInicio</td>
+				<td>@proyecto.presupuesto</td>
+                <td>@proyecto.tiempoEjecucion</td>
+                <td>@proyecto.faseActual</td>
+                
+                <td>
+                    <a class="btn btn-info"  asp-page=".\Edit" asp-route-id="@proyecto.proyectoId">Editar</a>
+                </td>
+                <td>
+                    <a class="btn btn-danger"  asp-page=".\Delete" asp-route-id="@proyecto.proyectoId">Borrar</a>
+                </td>
+                
+            </tr>
+        }
+    </tbody>
+</table>

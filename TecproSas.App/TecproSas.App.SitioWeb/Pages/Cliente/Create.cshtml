@@ -1,0 +1,82 @@
+﻿@page
+@model TecproSas.App.SitioWeb.Pages_Cliente.CreateModel
+@using TecproSas.App.Dominio
+@{
+}
+<h1>Crear clientes</h1>
+
+<!-- Formulario de creación de un cliente (nit,nombre, apellidos,telefono, nacionalidad, email, direccionCliente)-->
+<form method="post">
+<div asp-validation-summary="All" class="text-danger"></div>
+    
+<!-- Atributo nit -->
+
+<div class="form-group">
+
+    <label asp-for="cliente.nit" class="control-label"></label> 
+    <input asp-for="cliente.nit" class="form-control" />
+    <span asp-validation-for="cliente.nit" class="text-danger"></span>
+
+</div>
+
+<!-- Atributo nombre -->
+<div class="form-group">
+    <label asp-for="cliente.nombre" class="control-label"></label>
+    <input asp-for="cliente.nombre" class="form-control" />
+    <span asp-validation-for="cliente.nombre" class="text-danger"></span>
+</div>
+
+<!-- Atributo apellidos -->
+
+<div class="form-group">
+
+    <label asp-for="cliente.apellidos" class="control-label"></label> 
+    <input asp-for="cliente.apellidos" class="form-control" />
+    <span asp-validation-for="cliente.apellidos" class="text-danger"></span>
+
+</div>
+<!-- Atributo telefono -->
+
+<div class="form-group">
+
+    <label asp-for="cliente.telefono" class="control-label"></label> 
+    <input asp-for="cliente.telefono" class="form-control" />
+    <span asp-validation-for="cliente.telefono" class="text-danger"></span>
+
+</div>
+
+<!-- Atributo nacionalidad -->
+<div class="form-group">
+
+    <label asp-for="cliente.nacionalidad" class="control-label"></label> 
+    <input asp-for="cliente.nacionalidad" class="form-control" />
+    <span asp-validation-for="cliente.nacionalidad" class="text-danger"></span>
+
+</div>
+
+<!-- Atributo email -->
+<div class="form-group">
+
+    <label asp-for="cliente.email" class="control-label"></label> 
+    <input asp-for="cliente.email" class="form-control" />
+    <span asp-validation-for="cliente.email" class="text-danger"></span>
+
+</div>
+
+<!-- Atributo direccion Cliente -->
+<div class="form-group">
+
+    <label asp-for="cliente.direccionCliente" class="control-label"></label> 
+    <input asp-for="cliente.direccionCliente" class="form-control" />
+    <span asp-validation-for="cliente.direccionCliente" class="text-danger"></span>
+
+</div>
+<!-- Botón crear -->
+
+<div class="form-group">
+
+    <input type="submit" value="Crear" class="btn btn-primary" />
+
+</div>
+
+</form>

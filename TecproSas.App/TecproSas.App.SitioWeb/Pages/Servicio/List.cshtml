@@ -1,0 +1,43 @@
+﻿@page
+@model TecproSas.App.SitioWeb.Pages_Servicio.ListModel
+@{
+}
+<h1>Servicios</h1>
+<table class="table">
+    <thead>
+        <tr>
+		<th>Nombre Servicio</th>
+		<th>Valor</th>
+		<th>FechaInicio</th>
+		<th>Descripcion</th>
+
+
+            <th>Borrar</th>
+            <th>Editar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var servicio in Model.servicios)
+        {
+            <tr>
+			    <td>@servicio.nombServicio</td>
+                <td>@servicio.valor</td>
+                <td>@servicio.fechaInicio</td>
+                <td>@servicio.descripcion</td>
+
+
+
+                <td>
+                    <a class="btn btn-danger"  asp-page=".\Delete" asp-route-id="@servicio.servicioId">Borrar</a>
+                </td>
+                <td>
+                    <a class="btn btn-info"  asp-page=".\Edit" asp-route-id="@servicio.servicioId">Editar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<td>
+    <a class="btn btn-success"  asp-page=".\Create">Crear Servicio</a>
+</td>

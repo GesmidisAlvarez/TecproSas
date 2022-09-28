@@ -1,0 +1,13 @@
+﻿@page
+@model TecproSas.App.SitioWeb.Pages_Proyecto.DeleteModel
+@{
+}
+<h1>Borrar Proyecto</h1>
+<form method='post'>
+    <!-- Asignar Id del Proyecto a borrar -->
+    <input type="hidden" asp-for="proyecto.proyectoId" />
+    <h3>¿ Está seguro de borrar el proyecto @Model.proyecto.nombre @Model.proyecto.aprobadoPor ?</h3>
+
+    <input type="submit" value="Borrar" class="btn btn-danger" /> 
+    <a asp-page="/Proyecto/List">Devuelta a la lista</a>
+</form>

@@ -1,0 +1,97 @@
+﻿@page
+@model TecproSas.App.SitioWeb.Pages_Proyecto.EditModel
+@{
+}
+<h1>Editar Proyecto</h1>
+<!-- Formulario de edición de un Proyecto (Servicio	Cliente	Fase	Nombre	Aprobado Por	Descripcion	Fecha de Inicio	Presupuesto	Tiempo Ejecucion)-->
+<form method='post'>
+    <div asp-validation-summary="All" class="text-danger"></div>
+<!--
+Servicio	Cliente	Fase	Nombre	Aprobado Por	Descripcion	Fecha de Inicio	Presupuesto	Tiempo Ejecucion
+ -->
+ 
+ <!-- Atributo proyecto.servicioId -->
+    <div class="form-group">
+        <label asp-for="proyecto.servicioId" class="control-label"></label>
+        <input asp-for="proyecto.servicioId" class="form-control" />
+        <span asp-validation-for="proyecto.servicioId" class="text-danger"></span>
+    </div>
+
+
+    <!-- Atributo proyecto.clienteId -->
+    <div class="form-group">
+        <label asp-for="proyecto.clienteId" class="control-label"></label>
+        <input asp-for="proyecto.clienteId" class="form-control" />
+        <span asp-validation-for="proyecto.clienteId" class="text-danger"></span>
+    </div>
+
+
+    <!-- Atributo proyecto.nombre -->
+    <div class="form-group">
+        <label asp-for="proyecto.nombre" class="control-label"></label>
+        <input asp-for="proyecto.nombre" class="form-control" />
+        <span asp-validation-for="proyecto.nombre" class="text-danger"></span>
+    </div>
+
+
+    <!-- Atributo proyecto.aprobadoPor -->
+    <div class="form-group">
+        <label asp-for="proyecto.aprobadoPor" class="control-label"></label>
+        <input asp-for="proyecto.aprobadoPor" class="form-control" />
+        <span asp-validation-for="proyecto.aprobadoPor" class="text-danger"></span>
+    </div>
+
+
+
+    <!-- Atributo proyecto.descripcion -->
+    <div class="form-group">
+        <label asp-for="proyecto.descripcion" class="control-label"></label>
+        <input asp-for="proyecto.descripcion" class="form-control" />
+        <span asp-validation-for="proyecto.descripcion" class="text-danger"></span>
+    </div>
+
+
+
+    <!-- Atributo proyecto.fechaInicio -->
+    <div class="form-group">
+        <label asp-for="proyecto.fechaInicio" class="control-label"></label>
+        <input asp-for="proyecto.fechaInicio" class="form-control" />
+        <span asp-validation-for="proyecto.fechaInicio" class="text-danger"></span>
+    </div>
+
+
+    <!-- Atributo proyecto.presupuesto -->
+    <div class="form-group">
+        <label asp-for="proyecto.presupuesto" class="control-label"></label>
+        <input asp-for="proyecto.presupuesto" class="form-control" />
+        <span asp-validation-for="proyecto.presupuesto" class="text-danger"></span>
+    </div>
+
+
+    <!-- Atributo proyecto.tiempoEjecucion -->
+    <div class="form-group">
+        <label asp-for="proyecto.tiempoEjecucion" class="control-label"></label>
+        <input asp-for="proyecto.tiempoEjecucion" class="form-control" />
+        <span asp-validation-for="proyecto.tiempoEjecucion" class="text-danger"></span>
+    </div>
+
+
+    <!-- Atributo proyecto.faseActual -->
+    <div class="form-group">
+        <label asp-for="proyecto.faseActual" class="control-label"></label>
+        <input asp-for="proyecto.faseActual" class="form-control" />
+        <span asp-validation-for="proyecto.faseActual" class="text-danger"></span>
+    </div>
+
+
+
+
+    <!-- Asignar Id del cliente a editar -->
+    <input type="hidden" asp-for="proyecto.proyectoId" />
+
+    <!-- Botón Editar -->
+    <div class="form-group">
+        <input type="submit" value="Editar" class="btn btn-primary" />
+    </div>
+
+</form>

@@ -1,0 +1,63 @@
+﻿@page
+@model TecproSas.App.SitioWeb.Pages_Fase.CreateModel
+@{
+}
+<h1>Crear Fase</h1>
+
+<!-- Formulario de creación de un fase (nombreFase,fechaInicioFase,visitas,fechaVisitas,actualizacionVisitas)-->
+<form method="post">
+<div asp-validation-summary="All" class="text-danger"></div>
+    
+<!-- Atributo nombreFase -->
+
+<div class="form-group">
+
+    <label asp-for="fase.nombreFase" class="control-label"></label> 
+    <input asp-for="fase.nombreFase" class="form-control" />
+    <span asp-validation-for="fase.nombreFase" class="text-danger"></span>
+
+</div>
+
+<!-- Atributo fechaInicioFase -->
+<div class="form-group">
+
+    <label asp-for="fase.fechaInicioFase" class="control-label"></label> 
+    <input asp-for="fase.fechaInicioFase" class="form-control" />
+    <span asp-validation-for="fase.fechaInicioFase" class="text-danger"></span>
+
+</div>
+
+<!-- Atributo visitas -->
+<div class="form-group">
+
+    <label asp-for="fase.visitas" class="control-label"></label> 
+    <input asp-for="fase.visitas" class="form-control" />
+    <span asp-validation-for="fase.visitas" class="text-danger"></span>
+
+</div>
+
+<!-- Atributo fechaVisitas -->
+<div class="form-group">
+
+    <label asp-for="fase.fechaVisitas" class="control-label"></label> 
+    <input asp-for="fase.fechaVisitas" class="form-control" />
+    <span asp-validation-for="fase.fechaVisitas" class="text-danger"></span>
+
+</div>
+<!-- Atributo actualizacionVisita -->
+<div class="form-group">
+
+    <label asp-for="fase.actualizacionVisita" class="control-label"></label> 
+    <input asp-for="fase.actualizacionVisita" class="form-control" />
+    <span asp-validation-for="fase.actualizacionVisita" class="text-danger"></span>
+
+</div>
+
+<!-- Botón crear -->
+
+<div class="form-group">
+
+    <input type="submit" value="Crear" class="btn btn-primary" />
+
+</div>
+</form>

@@ -1,0 +1,56 @@
+﻿@page
+@model TecproSas.App.SitioWeb.Pages_Login.EditModel
+@{
+}
+<h1>Editar Login</h1>
+
+
+<!-- Formulario de creación de un login (usuarioId,clienteId,fechaRegistro,direccionIp)-->
+<form method="post">
+<div asp-validation-summary="All" class="text-danger"></div>
+    
+<!-- Atributo usuarioId-->
+
+<div class="form-group">
+
+    <label asp-for="login.usuarioId" class="control-label"></label> 
+    <input asp-for="login.usuarioId" class="form-control" />
+    <span asp-validation-for="login.usuarioId" class="text-danger"></span>
+
+</div>
+<!-- Atributo clienteId-->
+
+<div class="form-group">
+
+    <label asp-for="login.clienteId" class="control-label"></label> 
+    <input asp-for="login.clienteId" class="form-control" />
+    <span asp-validation-for="login.clienteId" class="text-danger"></span>
+
+</div>
+<!-- Atributo fechaRegistro-->
+
+<div class="form-group">
+
+    <label asp-for="login.fechaRegistro" class="control-label"></label> 
+    <input asp-for="login.fechaRegistro" class="form-control" />
+    <span asp-validation-for="login.fechaRegistro" class="text-danger"></span>
+
+</div>
+<!-- Atributo direccionIp-->
+
+<div class="form-group">
+
+    <label asp-for="login.direccionIp" class="control-label"></label> 
+    <input asp-for="login.direccionIp" class="form-control" />
+    <span asp-validation-for="login.direccionIp" class="text-danger"></span>
+
+</div>
+    <!-- Asignar Id del login a editar -->
+    <input type="hidden" asp-for="login.loginId" />
+
+    <!-- Botón Editar -->
+    <div class="form-group">
+        <input type="submit" value="Editar" class="btn btn-primary" />
+    </div>
+
+</form>

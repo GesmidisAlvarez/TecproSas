@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "LmqdwN3p4zU3YlCa9+D9YiB4h1LZ/LcoF21fizhityuPK29BBrnM2l2IvDN3DmJeWMN5fNc9gA6ZquD3NPUh8g==",
+  "success": true,
+  "projectFilePath": "C:\\Tecprodesas\\TecproSas.App\\TecproSas.App.Dominio\\TecproSas.App.Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Eneider Jimenez G\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Eneider Jimenez G\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Eneider Jimenez G\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

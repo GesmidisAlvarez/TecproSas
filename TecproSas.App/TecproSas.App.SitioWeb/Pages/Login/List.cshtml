@@ -1,0 +1,44 @@
+﻿@page
+@model TecproSas.App.SitioWeb.Pages_Login.ListModel
+@{
+}
+<h1>Listado de Login</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Login Id</th>
+			<th>usuario Id</th> 
+            <th>cliente Id</th>   
+			<th>Fecha Registro</th>
+			<th>DireccionIp</th>
+
+            <th>Borrar</th>
+            <th>Editar</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    @foreach (var login in Model.logins)
+        {
+            <tr>
+                <td>@login.loginId</td> 
+                <td>@login.usuarioId</td> 
+                <td>@login.clienteId</td> 
+				<td>@login.fechaRegistro</td>
+				<td>@login.direccionIp</td>
+
+                <td>
+                    <a class="btn btn-info"  asp-page=".\Edit" asp-route-id="@login.loginId">Editar</a>
+                </td>
+                <td>
+                    <a class="btn btn-danger"  asp-page=".\Delete" asp-route-id="@login.loginId">Borrar</a>
+                </td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+
+<td>
+    <a class="btn btn-success"  asp-page=".\Create">Crear Login</a>
+</td>

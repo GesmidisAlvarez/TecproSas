@@ -1,0 +1,4 @@
+C:\Tecprodesas\TecproSas.App\TecproSas.App.Persistencia\obj\Debug\netstandard2.0\TecproSas.App.Persistencia.csprojAssemblyReference.cache
+C:\Tecprodesas\TecproSas.App\TecproSas.App.Persistencia\obj\Debug\netstandard2.0\TecproSas.App.Persistencia.AssemblyInfoInputs.cache
+C:\Tecprodesas\TecproSas.App\TecproSas.App.Persistencia\obj\Debug\netstandard2.0\TecproSas.App.Persistencia.AssemblyInfo.cs
+C:\Tecprodesas\TecproSas.App\TecproSas.App.Persistencia\obj\Debug\netstandard2.0\TecproSas.App.Persistencia.csproj.CoreCompileInputs.cache

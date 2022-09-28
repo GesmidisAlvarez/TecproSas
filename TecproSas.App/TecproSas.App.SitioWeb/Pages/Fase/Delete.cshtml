@@ -1,0 +1,13 @@
+﻿@page
+@model TecproSas.App.SitioWeb.Pages_Fase.DeleteModel
+@{
+}
+<h1>Borrar Fase</h1>
+<form method='post'>
+    <!-- Asignar Id del cliente a borrar -->
+    <input type="hidden" asp-for="fase.faseId" />
+    <h1>¿ Está seguro de borrar esta fase @Model.fase.nombreFase @Model.fase.fechaInicioFase ?</h1>
+
+    <input type="submit" value="Borrar" class="btn btn-danger" /> 
+    <a asp-page="/Fase/List">Devuelta a la lista</a>
+</form>

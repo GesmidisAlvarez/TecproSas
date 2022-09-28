@@ -1,0 +1,110 @@
+﻿@page
+@model TecproSas.App.SitioWeb.Pages_Proyecto.CreateModel
+@{
+}
+<h1>Crear Proyecto</h1>
+
+<!-- Formulario de creación de un Proyecto (clienteId,servicioId,faseId,nombre,aprobadoPor,descripcion,fechaInicio,presupuesto,tiempoEjecucion,faseActual)-->
+<form method="post">
+<div asp-validation-summary="All" class="text-danger"></div>
+    
+<!-- Atributo clienteId -->
+
+<div class="form-group">
+
+    <label asp-for="proyecto.clienteId" class="control-label"></label> 
+    <input asp-for="proyecto.clienteId" class="form-control" />
+    <span asp-validation-for="proyecto.clienteId" class="text-danger"></span>
+
+</div>
+<!-- Atributo servicioId -->
+
+<div class="form-group">
+
+    <label asp-for="proyecto.servicioId" class="control-label"></label> 
+    <input asp-for="proyecto.servicioId" class="form-control" />
+    <span asp-validation-for="proyecto.servicioId" class="text-danger"></span>
+
+</div>
+<!-- Atributo faseId -->
+
+<div class="form-group">
+
+    <label asp-for="proyecto.faseId" class="control-label"></label> 
+    <input asp-for="proyecto.faseId" class="form-control" />
+    <span asp-validation-for="proyecto.faseId" class="text-danger"></span>
+
+</div>
+<!-- Atributo nombre -->
+
+<div class="form-group">
+
+    <label asp-for="proyecto.nombre" class="control-label"></label> 
+    <input asp-for="proyecto.nombre" class="form-control" />
+    <span asp-validation-for="proyecto.nombre" class="text-danger"></span>
+
+</div>
+<!-- Atributo aprobadoPor -->
+
+<div class="form-group">
+
+    <label asp-for="proyecto.aprobadoPor" class="control-label"></label> 
+    <input asp-for="proyecto.aprobadoPor" class="form-control" />
+    <span asp-validation-for="proyecto.aprobadoPor" class="text-danger"></span>
+
+</div>
+<!-- Atributo descripcion -->
+
+<div class="form-group">
+
+    <label asp-for="proyecto.descripcion" class="control-label"></label> 
+    <input asp-for="proyecto.descripcion" class="form-control" />
+    <span asp-validation-for="proyecto.descripcion" class="text-danger"></span>
+
+</div>
+<!-- Atributo fechaInicio -->
+
+<div class="form-group">
+
+    <label asp-for="proyecto.fechaInicio" class="control-label"></label> 
+    <input asp-for="proyecto.fechaInicio" class="form-control" />
+    <span asp-validation-for="proyecto.fechaInicio" class="text-danger"></span>
+
+</div>
+<!-- Atributo presupuesto -->
+
+<div class="form-group">
+
+    <label asp-for="proyecto.presupuesto" class="control-label"></label> 
+    <input asp-for="proyecto.presupuesto" class="form-control" />
+    <span asp-validation-for="proyecto.presupuesto" class="text-danger"></span>
+
+</div>
+<!-- Atributo tiempoEjecucion -->
+
+<div class="form-group">
+
+    <label asp-for="proyecto.tiempoEjecucion" class="control-label"></label> 
+    <input asp-for="proyecto.tiempoEjecucion" class="form-control" />
+    <span asp-validation-for="proyecto.tiempoEjecucion" class="text-danger"></span>
+
+</div>
+<!-- Atributo faseActual -->
+
+<div class="form-group">
+
+    <label asp-for="proyecto.faseActual" class="control-label"></label> 
+    <input asp-for="proyecto.faseActual" class="form-control" />
+    <span asp-validation-for="proyecto.faseActual" class="text-danger"></span>
+
+</div>
+
+
+<!-- Botón crear -->
+
+<div class="form-group">
+
+    <input type="submit" value="Crear" class="btn btn-primary" />
+
+</div>
+</form>

@@ -1,0 +1,51 @@
+﻿@page
+@model TecproSas.App.SitioWeb.Pages_Cliente.ListModel
+@{
+}
+<h1>Clientes</h1>
+<table class="table">
+    <thead>
+         <tr> 
+            <th>cliente Id</th>
+            <th>Nit</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Telefono</th>
+            <th>Nacionalidad</th>
+            <th>Email</th>
+            <th>Direccion</th>
+
+            <th>Editar</th>
+            <th>Borrar</th>
+        </tr>
+    </thead> 
+    <tbody>
+        @foreach (var cliente in Model.clientes)
+        {
+            <tr>
+                <td>@cliente.clienteId</td>
+			    <td>@cliente.nit</td>
+                <td>@cliente.nombre</td>
+                <td>@cliente.apellidos</td>
+                <td>@cliente.telefono</td>
+                <td>@cliente.nacionalidad</td>
+                <td>@cliente.email</td>
+                <td>@cliente.direccionCliente</td>
+                
+
+                <td>
+                    <a class="btn btn-info"  asp-page=".\Edit" asp-route-id="@cliente.clienteId">Editar</a>
+                </td>
+                <td>
+                    <a class="btn btn-danger"  asp-page=".\Delete" asp-route-id="@cliente.clienteId">Borrar</a>
+                </td>
+                
+            </tr>
+        }
+        
+    </tbody>
+</table>
+<td>
+    <a class="btn btn-success"  asp-page=".\Create">Crear Cliente</a>
+</td>
+

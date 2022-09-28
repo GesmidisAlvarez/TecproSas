@@ -1,0 +1,55 @@
+﻿@page
+@model TecproSas.App.SitioWeb.Pages_Servicio.CreateModel
+@{
+}
+<h1>Crear Servicio</h1>
+
+
+<!-- Formulario de creación de un Servicio (nombServicio,valor,fechaInicio,descripcion)-->
+<form method="post">
+<div asp-validation-summary="All" class="text-danger"></div>
+    
+<!-- Atributo nombServicio -->
+
+<div class="form-group">
+
+    <label asp-for="servicio.nombServicio" class="control-label"></label> 
+    <input asp-for="servicio.nombServicio" class="form-control" />
+    <span asp-validation-for="servicio.nombServicio" class="text-danger"></span>
+
+</div>
+
+<!-- Atributo valor -->
+<div class="form-group">
+
+    <label asp-for="servicio.valor" class="control-label"></label> 
+    <input asp-for="servicio.valor" class="form-control" />
+    <span asp-validation-for="servicio.valor" class="text-danger"></span>
+
+</div>
+
+<!-- Atributo fechaInicio -->
+<div class="form-group">
+
+    <label asp-for="servicio.fechaInicio" class="control-label"></label> 
+    <input asp-for="servicio.fechaInicio" class="form-control" />
+    <span asp-validation-for="servicio.fechaInicio" class="text-danger"></span>
+
+</div>
+<!-- Atributo descripcion -->
+<div class="form-group">
+
+    <label asp-for="servicio.descripcion" class="control-label"></label> 
+    <input asp-for="servicio.descripcion" class="form-control" />
+    <span asp-validation-for="servicio.descripcion" class="text-danger"></span>
+
+</div>
+
+<!-- Botón crear -->
+
+<div class="form-group">
+
+    <input type="submit" value="Crear" class="btn btn-primary" />
+
+</div>
+</form>

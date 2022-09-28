@@ -1,0 +1,54 @@
+﻿@page
+@model TecproSas.App.SitioWeb.Pages_Servicio.EditModel
+@{
+}
+<h1>Editar Servicio</h1>
+
+
+<!-- Formulario de edición de un Servicio (nombServicio	valor fechaInicio	descripcion )-->
+
+<form method='post'>
+    <div asp-validation-summary="All" class="text-danger"></div>
+   
+ <!-- Atributo servicio.nombServicio -->
+    <div class="form-group">
+        <label asp-for="servicio.nombServicio" class="control-label"></label>
+        <input asp-for="servicio.nombServicio" class="form-control" />
+        <span asp-validation-for="servicio.nombServicio" class="text-danger"></span>
+    </div>
+ 
+ 
+ 
+ <!-- Atributo servicio.valor -->
+    <div class="form-group">
+        <label asp-for="servicio.valor" class="control-label"></label>
+        <input asp-for="servicio.valor" class="form-control" />
+        <span asp-validation-for="servicio.valor" class="text-danger"></span>
+    </div>
+ 
+ 
+ <!-- Atributo servicio.fechaInicio -->
+    <div class="form-group">
+        <label asp-for="servicio.fechaInicio" class="control-label"></label>
+        <input asp-for="servicio.fechaInicio" class="form-control" />
+        <span asp-validation-for="servicio.fechaInicio" class="text-danger"></span>
+    </div>
+ 
+  
+ <!-- Atributo servicio.descripcion -->
+    <div class="form-group">
+        <label asp-for="servicio.descripcion" class="control-label"></label>
+        <input asp-for="servicio.descripcion" class="form-control" />
+        <span asp-validation-for="servicio.descripcion" class="text-danger"></span>
+    </div>
+
+
+    <!-- Asignar Id del servicio a editar -->
+    <input type="hidden" asp-for="servicio.servicioId" />
+
+    <!-- Botón Editar -->
+    <div class="form-group">
+        <input type="submit" value="Editar" class="btn btn-primary" />
+    </div>
+
+</form>

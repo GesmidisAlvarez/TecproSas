@@ -1,0 +1,43 @@
+﻿@page
+@model TecproSas.App.SitioWeb.Pages_Fase.ListModel
+@{
+}
+<h1> Fases</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre Fase</th>
+            <th>Inicio de Fase</th>
+            <th>Visitas</th>
+            <th>Fecha Visitas</th>
+			<th>Actualizacion Visita</th>
+
+            <th>Editar</th>
+            <th>Borrar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fase in Model.fases)
+        {
+            <tr>
+                <td>@fase.nombreFase</td>
+                <td>@fase.fechaInicioFase</td>
+                <td>@fase.visitas</td>
+                <td>@fase.fechaVisitas</td>
+				<td>@fase.actualizacionVisita</td>
+
+                <td>
+                    <a class="btn btn-info"  asp-page=".\Edit" asp-route-id="@fase.faseId">Editar</a>
+                </td>
+                <td>
+                    <a class="btn btn-danger"  asp-page=".\Delete" asp-route-id="@fase.faseId">Borrar</a>
+                </td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+
+<td>
+    <a class="btn btn-success"  asp-page=".\Create">Crear Fase</a>
+</td>

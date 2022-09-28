@@ -1,0 +1,13 @@
+﻿@page
+@model TecproSas.App.SitioWeb.Pages_Login.DeleteModel
+@{
+}
+<h1>Borrar Login</h1>
+<form method='post'>
+    <!-- Asignar Id del login a borrar -->
+    <input type="hidden" asp-for="login.loginId" />
+    <h1>¿ Está seguro de borrar el login @Model.login.loginId @Model.login.direccionIp ?</h1>
+
+    <input type="submit" value="Borrar" class="btn btn-danger" /> 
+    <a asp-page="/Login/List">Devuelta a la lista</a>
+</form>
